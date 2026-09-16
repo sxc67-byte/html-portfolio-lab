@@ -2,45 +2,163 @@
 <head>
 <title>About Ansuman Kant Pant</title>
 <style>
-  body {
+     {
+    box-sizing: border-box;      
+  }
+  
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+    background-color: #f4f6f8;    
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;             
   }
 
-  header {
+header {
     background-color: #2c3e50;
+    background-image: linear-gradient(135deg, #2c3e50, #34495e);  
     color: white;
-    text-align: center;
     padding: 30px 10px;
+
+    display: flex;                
+    flex-direction: column;     
+    align-items: center;        
+    justify-content: center;      
+    gap: 8px;                     
+
+    position: sticky;       
+    top: 0;                       
+    z-index: 100;             
   }
 
+  header h1 {
+    margin: 0;
+    text-transform: uppercase;    
+    letter-spacing: 2px;          
+    font-weight: 700;              
+  }
+
+  header p {
+    margin-top: 4px;            
+    font-size: 15px;              
+  }
+
+  
   main {
-    max-width: 800px;
+    max-width: 800px;             
+    min-height: 400px;        
     margin: 20px auto;
     padding: 0 20px;
   }
 
+    
   section {
     background-color: white;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding-left: 25px;         
+    padding-right: 25px;      
+    margin-top: 10px;             
+    margin-bottom: 20px;          
+    border: 1px solid #e0e4e8;    
+    border-radius: 8px;           
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+    position: relative;          
+    overflow: hidden;           
   }
 
+  
+  .badge {
+    position: absolute;         
+    top: 10px;                    
+    right: 10px;                  
+    z-index: 5;                 
+    background-color: #2c3e50;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;        
+    text-transform: uppercase;    
+    letter-spacing: 1px;          
+  }
+
+    
   h2, h3, h4, h5, h6 {
     color: #2c3e50;
+    font-weight: 700;         
   }
 
+    
   blockquote {
     background-color: #ecf0f1;
     border-left: 5px solid #2c3e50;
+    border-radius: 4px;         
     margin: 10px 0;
     padding: 10px 15px;
     font-style: italic;
+    font-size: 16px;              
+  }
+
+  
+  img {
+    width: 100%;                
+    height: auto;                 
+    max-width: 100%;              
+    border-radius: 6px;           
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); 
+    cursor: pointer;              
+  }
+
+  
+  table {
+    width: 100%;                  
+    border-radius: 8px;           
+    overflow: hidden;           
+  }
+
+  td {
+    text-align: center;           
+    padding-left: 10px;           
+    padding-right: 10px;        
+  }
+
+  
+  form {
+    display: flex;            
+    flex-direction: column;     
+    flex-wrap: wrap;            
+    gap: 12px;                  
+    max-width: 500px;           
+  }
+
+  label {
+    font-weight: 700;           
+    font-size: 14px;          
+  }
+
+  input, textarea {
+    width: 100%;                  
+    padding: 10px;
+    border: 1px solid #ccc;       
+    border-radius: 6px;           
+    font-size: 15px;              
+  }
+
+  button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;               
+    border-radius: 6px;           
+    padding: 10px 20px;
+    font-weight: 700;            
+    text-decoration: none;      
+    cursor: pointer;             
+  }
+  iframe, object, embed {
+    max-width: 100%;             
+    border: 1px solid #ddd;      
+    border-radius: 6px;         
   }
 
 </style>
@@ -179,6 +297,315 @@
 
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="4" required></textarea><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>
+
+  /* ============ 1. RESET / BOX MODEL ============ */
+  * {
+    box-sizing: border-box;      /* Sizing & Box Model */
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;   /* Backgrounds */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;            /* Typography */
+  }
+
+  /* ============ 2. HEADER (Layout + Positioning) ============ */
+  header {
+    background-color: #2c3e50;
+    background-image: linear-gradient(135deg, #2c3e50, #34495e); /* Backgrounds */
+    color: white;
+    padding: 30px 10px;
+
+    display: flex;               /* Layout & Framework */
+    flex-direction: column;      /* Layout & Framework */
+    align-items: center;         /* Layout & Framework */
+    justify-content: center;     /* Layout & Framework */
+    gap: 8px;                    /* Layout & Framework */
+
+    position: sticky;            /* Positioning */
+    top: 0;                      /* Positioning */
+    z-index: 100;                /* Positioning */
+  }
+
+  header h1 {
+    margin: 0;
+    text-transform: uppercase;   /* Typography */
+    letter-spacing: 2px;         /* Typography */
+    font-weight: 700;            /* Typography */
+  }
+
+  header p {
+    margin-top: 4px;             /* Spacing */
+    font-size: 15px;             /* Typography */
+  }
+
+  /* ============ 3. MAIN CONTENT AREA ============ */
+  main {
+    max-width: 800px;            /* Sizing */
+    min-height: 400px;           /* Sizing */
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+
+  /* ============ 4. SECTIONS (Cards) ============ */
+  section {
+    background-color: white;
+    padding: 20px;
+    padding-left: 25px;          /* Spacing */
+    padding-right: 25px;         /* Spacing */
+    margin-top: 10px;            /* Spacing */
+    margin-bottom: 20px;         /* Spacing */
+    border: 1px solid #e0e4e8;   /* Backgrounds & Borders */
+    border-radius: 8px;          /* Backgrounds & Borders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Backgrounds & Borders */
+    position: relative;          /* Positioning */
+    overflow: hidden;            /* Behaviors */
+  }
+
+  /* Small decorative "badge" example using position + top/right/z-index */
+  .badge {
+    position: absolute;          /* Positioning */
+    top: 10px;                   /* Positioning */
+    right: 10px;                 /* Positioning */
+    z-index: 5;                  /* Positioning */
+    background-color: #2c3e50;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;       /* Typography */
+    text-transform: uppercase;   /* Typography */
+    letter-spacing: 1px;         /* Typography */
+  }
+
+  /* ============ 5. HEADINGS ============ */
+  h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    font-weight: 700;            /* Typography */
+  }
+
+  /* ============ 6. BLOCKQUOTE ============ */
+  blockquote {
+    background-color: #ecf0f1;
+    border-left: 5px solid #2c3e50;
+    border-radius: 4px;          /* Backgrounds & Borders */
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-style: italic;
+    font-size: 16px;             /* Typography */
+  }
+
+  /* ============ 7. IMAGES ============ */
+  img {
+    width: 100%;                 /* Sizing */
+    height: auto;                /* Sizing */
+    max-width: 100%;             /* Sizing */
+    border-radius: 6px;          /* Backgrounds & Borders */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Backgrounds & Borders */
+    cursor: pointer;             /* Behaviors */
+  }
+
+  /* ============ 8. TABLE / GALLERY GRID ============ */
+  table {
+    width: 100%;                 /* Sizing */
+    border-radius: 8px;          /* Backgrounds & Borders */
+    overflow: hidden;            /* Behaviors */
+  }
+
+  td {
+    text-align: center;          /* Typography */
+    padding-left: 10px;          /* Spacing */
+    padding-right: 10px;         /* Spacing */
+  }
+
+  /* ============ 9. FORM (Flexbox layout) ============ */
+  form {
+    display: flex;               /* Layout & Framework */
+    flex-direction: column;      /* Layout & Framework */
+    flex-wrap: wrap;             /* Layout & Framework */
+    gap: 12px;                   /* Layout & Framework */
+    max-width: 500px;            /* Sizing */
+  }
+
+  label {
+    font-weight: 700;            /* Typography */
+    font-size: 14px;             /* Typography */
+  }
+
+  input, textarea {
+    width: 100%;                 /* Sizing */
+    padding: 10px;
+    border: 1px solid #ccc;      /* Backgrounds & Borders */
+    border-radius: 6px;          /* Backgrounds & Borders */
+    font-size: 15px;             /* Typography */
+  }
+
+  button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;                /* Backgrounds & Borders */
+    border-radius: 6px;          /* Backgrounds & Borders */
+    padding: 10px 20px;
+    font-weight: 700;            /* Typography */
+    text-decoration: none;       /* Typography */
+    cursor: pointer;             /* Behaviors */
+  }
+
+  /* ============ 10. IFRAME / EMBED WRAPPER ============ */
+  iframe, object, embed {
+    max-width: 100%;             /* Sizing */
+    border: 1px solid #ddd;      /* Backgrounds & Borders */
+    border-radius: 6px;          /* Backgrounds & Borders */
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ansuman Kant Pant</h1>
+  <p>Grade 11 Student &mdash; St. Xavier's College, Maitighar</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Information</h2>
+
+    <h3>About Me</h3>
+    <p>
+      My name is <strong>Ansuman Kant Pant</strong>. I completed my <b>SEE (Grade 10)</b>
+      from Pathshala Nepal Foundation, and I am currently studying in <em>Grade 11</em>
+      at St. Xavier's College, Maitighar.
+    </p>
+    <p>
+      <small>This page was created as a collage HTML project.</small>
+    </p>
+
+    <h3>My Skills</h3>
+    <p>I consider myself good at the following:</p>
+    <ul>
+      <li><i>Time Management</i></li>
+      <li><strong>Problem Solving</strong></li>
+      <li>Video Editing</li>
+    </ul>
+
+    <h3>My Hobbies</h3>
+    <p>
+      My <mark>main hobby is Wildlife Photography</mark>. Apart from that,
+      I also enjoy <ins>Singing</ins> and playing the guitar, though I've recently
+      had <del>less time</del> more time to practice it.
+    </p>
+    <p>
+      This year marks my 2<sup>nd</sup> year of taking photography seriously,
+      and one of my early shots even placed 7<sup>th</sup> in a state championship.
+      Some of my technique notes are based on tips from photographers I follow
+      online<sub>1</sub>.
+    </p>
+
+    <h4>My Future Goal</h4>
+    <p>
+      My future goal is to become an <strong>engineer</strong>, because it fits well
+      with my problem-solving ability.
+    </p>
+    <blockquote>
+      "I want to build things that solve real problems, not just study theory."
+    </blockquote>
+
+    <h4>My Roadmap</h4>
+    <p>Here are the steps I'm following to reach my goal:</p>
+    <ol>
+      <li>Finish Grade 11 and Grade 12 with strong marks in Math and Science</li>
+      <li>Build more hands-on projects like this portfolio</li>
+      <li>Prepare for engineering entrance exams</li>
+      <li>Apply to engineering programs</li>
+    </ol>
+  </section>
+
+  <section>
+    <span class="badge">Profile</span>
+    <h5>My Photo</h5>
+    <img src="1000036780.jpg" alt="My Profile Image" width="300">
+  </section>
+
+  <section>
+    <span class="badge">Gallery</span>
+    <h6>Wildlife Photography Gallery</h6>
+    <p>Here are a few of my wildlife shots(Actually Mine), arranged in a simple grid using a table:</p>
+    <table border="1" cellpadding="5" cellspacing="5">
+      <tr>
+        <td><img src="1000028750.jpg" alt="Wildlife photo 1" width="220"></td>
+        <td><img src="1000028745.jpg" alt="Wildlife photo 2" width="220"></td>
+        <td><img src="1000037743.jpg" alt="Wildlife photo 3" width="220"></td>
+      </tr>
+      <tr>
+        <td><img src="1000038111.jpg" alt="Wildlife photo 4" width="220"></td>
+        <td><img src="1000037738.jpg" alt="Wildlife photo 5" width="220"></td>
+        <td><img src="1000034689.jpg" alt="Wildlife photo 6" width="220"></td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h3>Audio Sample</h3>
+    <p>My Favourite Song:</p>
+    <audio controls>
+      <source src="Lori - Pahenlo Batti Muni (Guitar Playthrough).mp3" type="audio/mpeg">
+      <source src="Lori - Pahenlo Batti Muni (Guitar Playthrough).ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section>
+    <h3>Video Sample</h3>
+    <p>A short video clip:</p>
+    <video controls poster="https://picsum.photos/id/1069/500/300" width="500">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section>
+    <h3>My Resume (PDF Embed using object tag)</h3>
+    <object data="ID CARD_Ansuman.pdf" type="application/pdf" width="600" height="800">
+    </object>
+  </section>
+
+  <section>
+    <h3>Embed Example</h3>
+    <p>An image embedded using the embed tag:</p>
+    <embed src="https://picsum.photos/id/1069/300/200" type="image/jpeg" width="300" height="200">
+  </section>
+
+  <section>
+    <h3>Iframe Example</h3>
+    <p>An external webpage embedded below:</p>
+    <iframe src="https://en.wikipedia.org/wiki/Wildlife_photography" width="720" height="1000" title="Wildlife Photography Wikipedia Page"></iframe>
+  </section>
+
+  <section>
+    <h3>Contact Me</h3>
+    <p>Have a question or feedback? Send me a message below:</p>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
       <button type="submit">Send</button>
     </form>
